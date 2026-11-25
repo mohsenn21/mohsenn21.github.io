@@ -28,15 +28,18 @@ h2{text-align:center;font-size:30px;color:#9d174d;margin-bottom:34px}
 .info div{background:#fff;border-radius:14px;padding:24px;box-shadow:0 3px 12px rgba(0,0,0,.06)}
 .info b{color:#9d174d;display:block;margin-bottom:6px;font-size:17px}
 footer{background:#3b2230;color:#e8c9d8;text-align:center;padding:30px 16px;font-size:14.5px}
+.demo-banner{background:#f59e0b;color:#1f2937;text-align:center;font-weight:800;padding:10px 14px;font-size:15px;position:sticky;top:0;z-index:50}
+#demo-toast{display:none;position:fixed;bottom:24px;right:50%;transform:translateX(50%);background:#1f2937;color:#fff;padding:14px 22px;border-radius:12px;font-size:15px;box-shadow:0 6px 20px rgba(0,0,0,.25);z-index:99;max-width:90%;text-align:center}
 @media(max-width:600px){.hero h1{font-size:32px}}
 </style>
 </head>
 <body>
+<div class="demo-banner">صفحة تجريبية لعرض التصميم فقط — مش بيزنس حقيقي، والبيانات اللي بتتكتب هنا مش بتتحفظ</div>
 <div class="hero">
 <h1>بوتيك لينا</h1>
 <p>أحدث صيحات الموضة النسائية في التجمع الخامس. خامات ممتازة وأسعار في المتناول.</p>
 <a class="btn" href="#collection">شوفي الكولكشن</a>
-<a class="btn green" href="https://wa.me/201000000000">اطلبي واتساب</a>
+<a class="btn green" href="#" onclick="demoOrder(event)">اطلبي واتساب</a>
 </div>
 <nav>
 <a href="#collection">الكولكشن</a>
@@ -46,10 +49,10 @@ footer{background:#3b2230;color:#e8c9d8;text-align:center;padding:30px 16px;font
 <section id="collection">
 <h2>كولكشن الشتاء</h2>
 <div class="grid">
-<div class="item"><div class="img" style="background:linear-gradient(135deg,#f9a8d4,#ec4899)">بلوزة صوف</div><div class="body"><div class="name">بلوزة صوف أوفر سايز</div><div class="price">٣٥٠ جنيه</div><a href="https://wa.me/201000000000">اطلبيها</a></div></div>
-<div class="item"><div class="img" style="background:linear-gradient(135deg,#c4b5fd,#8b5cf6)">فستان سهرة</div><div class="body"><div class="name">فستان سهرة ساتان</div><div class="price">٨٥٠ جنيه</div><a href="https://wa.me/201000000000">اطلبيها</a></div></div>
-<div class="item"><div class="img" style="background:linear-gradient(135deg,#fca5a5,#ef4444)">جاكيت جلد</div><div class="body"><div class="name">جاكيت جلد طبيعي</div><div class="price">١٢٠٠ جنيه</div><a href="https://wa.me/201000000000">اطلبيها</a></div></div>
-<div class="item"><div class="img" style="background:linear-gradient(135deg,#fdba74,#f97316)">طرحة شيفون</div><div class="body"><div class="name">طرحة شيفون - ألوان</div><div class="price">١٨٠ جنيه</div><a href="https://wa.me/201000000000">اطلبيها</a></div></div>
+<div class="item"><div class="img" style="background:linear-gradient(135deg,#f9a8d4,#ec4899)">بلوزة صوف</div><div class="body"><div class="name">بلوزة صوف أوفر سايز</div><div class="price">٣٥٠ جنيه</div><a href="#" onclick="demoOrder(event)">اطلبيها</a></div></div>
+<div class="item"><div class="img" style="background:linear-gradient(135deg,#c4b5fd,#8b5cf6)">فستان سهرة</div><div class="body"><div class="name">فستان سهرة ساتان</div><div class="price">٨٥٠ جنيه</div><a href="#" onclick="demoOrder(event)">اطلبيها</a></div></div>
+<div class="item"><div class="img" style="background:linear-gradient(135deg,#fca5a5,#ef4444)">جاكيت جلد</div><div class="body"><div class="name">جاكيت جلد طبيعي</div><div class="price">١٢٠٠ جنيه</div><a href="#" onclick="demoOrder(event)">اطلبيها</a></div></div>
+<div class="item"><div class="img" style="background:linear-gradient(135deg,#fdba74,#f97316)">طرحة شيفون</div><div class="body"><div class="name">طرحة شيفون - ألوان</div><div class="price">١٨٠ جنيه</div><a href="#" onclick="demoOrder(event)">اطلبيها</a></div></div>
 </div>
 </section>
 <section id="why">
@@ -65,9 +68,11 @@ footer{background:#3b2230;color:#e8c9d8;text-align:center;padding:30px 16px;font
 <div class="info">
 <div><b>العنوان</b>فيوتشر مول، الدور الثاني، التجمع الثالث، القاهرة الجديدة</div>
 <div><b>المواعيد</b>يوميًا ١٠ صباحًا - ١١ مساءً</div>
-<div><b>للطلبات</b>0100 000 0000<br>واتساب وانستجرام</div>
+<div><b>للطلبات</b>0100 000 0000 (رقم تجريبي)<br>واتساب وانستجرام</div>
 </div>
 </section>
+<div id="demo-toast">ده زر تجريبي في العرض ده — في موقعك الحقيقي الزر ده بيفتح واتساب المحل مباشرة</div>
 <footer>بوتيك لينا © ٢٠٢٦ — موقع تعريفي تجريبي</footer>
+<script>function demoOrder(e){e.preventDefault();var t=document.getElementById('demo-toast');t.style.display='block';setTimeout(function(){t.style.display='none'},4000)}</script>
 </body>
 </html>
