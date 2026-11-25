@@ -30,10 +30,14 @@ tr:last-child td{border-bottom:none}
 form{max-width:460px;margin:0 auto;background:#1e293b;padding:30px;border-radius:16px;display:grid;gap:14px}
 input,select{padding:12px 14px;border-radius:10px;border:1px solid #334155;background:#0f172a;color:#fff;font-size:15px}
 footer{background:#020617;color:#94a3b8;text-align:center;padding:28px 16px;font-size:14.5px}
+.demo-banner{background:#f59e0b;color:#1f2937;text-align:center;font-weight:800;padding:10px 14px;font-size:15px;position:sticky;top:0;z-index:50}
+.demo-note{color:#94a3b8;font-size:13.5px;margin:-8px 0 12px;text-align:center}
+#done{display:none;color:#4ade80;font-weight:700;text-align:center}
 @media(max-width:600px){.hero h1{font-size:33px}}
 </style>
 </head>
 <body>
+<div class="demo-banner">صفحة تجريبية لعرض التصميم فقط — مش بيزنس حقيقي، والبيانات اللي بتتكتب هنا مش بتتحفظ</div>
 <div class="hero">
 <h1>آيرون <span>جيم</span></h1>
 <p>أجهزة حديثة، كباتن محترفين، وبرامج تدريب لكل مستوى. أول حصة تجريبية علينا.</p>
@@ -65,20 +69,23 @@ footer{background:#020617;color:#94a3b8;text-align:center;padding:28px 16px;font
 </section>
 <section id="join">
 <h2>احجز حصتك التجريبية</h2>
-<form>
+<form onsubmit="return false">
+<p class="demo-note">نموذج تجريبي للعرض فقط — لا يتم حفظ أو إرسال أي بيانات</p>
 <input type="text" placeholder="الاسم بالكامل">
 <input type="tel" placeholder="رقم الموبايل">
 <select><option>اختار الباقة</option><option>شهري - ٣٠٠ ج</option><option>٣ شهور - ٨٠٠ ج</option><option>سنوي - ٢٥٠٠ ج</option></select>
-<button class="btn" type="button">احجز</button>
+<button class="btn" type="button" onclick="bookDemo()">احجز</button>
+<div id="done">تم استلام طلب الحجز (عرض تجريبي — لا يتم حفظ أو إرسال أي بيانات)</div>
 </form>
 </section>
 <section id="contact">
 <div class="cards">
 <div class="card"><b>العنوان</b>شارع مصطفى النحاس، مدينة نصر، القاهرة</div>
 <div class="card"><b>المواعيد</b>يوميًا ٧ صباحًا - ١٢ منتصف الليل</div>
-<div class="card"><b>اتصل بينا</b>0111 000 0000</div>
+<div class="card"><b>اتصل بينا</b>0111 000 0000 (رقم تجريبي)</div>
 </div>
 </section>
 <footer>آيرون جيم © ٢٠٢٦ — موقع تعريفي تجريبي</footer>
+<script>function bookDemo(){var f=document.querySelector('form');document.getElementById('done').style.display='block';f.querySelectorAll('input').forEach(function(i){i.value=''});f.querySelector('select').selectedIndex=0}</script>
 </body>
 </html>
