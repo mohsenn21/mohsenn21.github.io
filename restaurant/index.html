@@ -26,15 +26,18 @@ h2{text-align:center;font-size:30px;color:#7c2d12;margin-bottom:34px}
 .info div{background:#fff;border-radius:14px;padding:24px;box-shadow:0 3px 12px rgba(0,0,0,.06)}
 .info b{color:#7c2d12;display:block;margin-bottom:6px;font-size:17px}
 footer{background:#2b2118;color:#d6c9ba;text-align:center;padding:30px 16px;font-size:14.5px}
+.demo-banner{background:#f59e0b;color:#1f2937;text-align:center;font-weight:800;padding:10px 14px;font-size:15px;position:sticky;top:0;z-index:50}
+#demo-toast{display:none;position:fixed;bottom:24px;right:50%;transform:translateX(50%);background:#1f2937;color:#fff;padding:14px 22px;border-radius:12px;font-size:15px;box-shadow:0 6px 20px rgba(0,0,0,.25);z-index:99;max-width:90%;text-align:center}
 @media(max-width:600px){.hero h1{font-size:32px}}
 </style>
 </head>
 <body>
+<div class="demo-banner">صفحة تجريبية لعرض التصميم فقط — مش بيزنس حقيقي، والبيانات اللي بتتكتب هنا مش بتتحفظ</div>
 <div class="hero">
 <h1>مطعم الأصالة</h1>
 <p>أكل مصري أصيل من قلب مدينة نصر. كشري، مشويات، وحواوشي بطعم البيت من ١٩٩٨.</p>
 <a class="btn" href="#menu">شوف المنيو</a>
-<a class="btn green" href="https://wa.me/201000000000">اطلب واتساب</a>
+<a class="btn green" href="#" onclick="demoOrder(event)">اطلب واتساب</a>
 </div>
 <nav>
 <a href="#menu">المنيو</a>
@@ -65,9 +68,11 @@ footer{background:#2b2118;color:#d6c9ba;text-align:center;padding:30px 16px;font
 <div class="info">
 <div><b>العنوان</b>١٥ شارع عباس العقاد، مدينة نصر، القاهرة</div>
 <div><b>المواعيد</b>يوميًا من ١٢ ظهرًا لـ ٢ بعد منتصف الليل</div>
-<div><b>للحجز والطلبات</b>0100 000 0000<br>واتساب متاح</div>
+<div><b>للحجز والطلبات</b>0100 000 0000 (رقم تجريبي)<br>واتساب متاح</div>
 </div>
 </section>
+<div id="demo-toast">ده زر تجريبي في العرض ده — في موقعك الحقيقي الزر ده بيفتح واتساب المطعم مباشرة</div>
 <footer>مطعم الأصالة © ٢٠٢٦ — موقع تعريفي تجريبي</footer>
+<script>function demoOrder(e){e.preventDefault();var t=document.getElementById('demo-toast');t.style.display='block';setTimeout(function(){t.style.display='none'},4000)}</script>
 </body>
 </html>
